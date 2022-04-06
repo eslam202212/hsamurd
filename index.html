@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Binomo</title>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <!-- Loading -->
+    <!-- <div class="preloader_sandbox__8oPnx👫">
+      <div class="preloader_worm__OBzSj👯🏼&zwj;♀️"></div>
+      <div class="preloader_worm__OBzSj👯🏼&zwj;♀️"></div>
+      <div class="preloader_worm__OBzSj👯🏼&zwj;♀️"></div>
+      <div class="preloader_worm__OBzSj👯🏼&zwj;♀️"></div>
+    </div> -->
+    <!-- Loading -->
+    <!-- Start drawer -->
+    <div class="drawer" id="drawer">
+      <ul class="drawer__menu">
+        <li class="drawer__menu__item"><a href="">VIP</a></li>
+        <li class="drawer__menu__item"><a href=""> Prestige Club</a></li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>For traders</span>
+          <i class="fa fa-chevron-down"></i>
+
+          <ul class="drawer__dropdown">
+            <li><a href="">Tournaments</a></li>
+            <li><a href="">Promotions</a></li>
+            <li><a href="">Strategies</a></li>
+          </ul>
+
+        </a></li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>Training</span>
+          <i class="fa fa-chevron-down"></i>
+            <ul class="drawer__dropdown">
+            <li><a href="">Glossary of Terms</a></li>
+          </ul>
+        </li>
+        <li class="drawer__menu__item drawer__menu__dropdown">
+          <span>Information</span>
+          <i class="fa fa-chevron-down"></i>
+
+          <ul class="drawer__dropdown">
+            <li><a href="">Statuses</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Regulations</a></li>
+            <li><a href="">Client Agreement</a></li>
+            <li><a href="">Affiliate program</a></li>
+          </ul>
+        </li>
+        <li class="drawer__menu__item"><a href="">Help Center</a></li>
+      </ul>
+    </div>
+    <!-- End drawer -->
+
+    <!-- Start login -->
+    <div class="login" id="login">
+      <div class="d-flex">
+        <h3>Registration</h3>
+        <h3 class="active">Login</h3>
+      </div>
+      <div class="login-with d-flex  mt-4">
+        <p>
+          <img src="images/facebook.svg" alt="">
+        </p>
+        <p>
+          <img src="images/gp.svg" alt="">
+        </p>
+      </div>
+      <form action="">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" required>
+          <i class="fa fa-eye"></i>
+        </div>
+        <p class="text-underline text-left">Forgot my password</p>
+        <button type="button" id="btnLogin">Sign in</button>
+      </form>
+      <p class="mt-4 d-flex no-account justify-content-center">
+        No account? <button type="button" class="bg-dark btn btn-sm text-white">Create</button>
+      </p>
+    </div>
+    <!-- End login -->
+
+    <!-- Start Header -->
+    <header>
+      <!-- Start Navbar -->
+      <nav class="navbar navbar-light px-4">
+        <div class="navbar__left">
+          <i class="fa fa-times"></i>
+          <i class="fa fa-bars"></i>
+          <a class="navbar-brand" href="/">
+            <img src="images/logo-icon.svg" alt="">
+            <img class="invert" src="images/brand-logo.svg" alt="">
+            </a>
+        </div>
+        <div class="mr-auto mt-2 mt-lg-0 menu__right align-items-center d-flex">
+          <button id="openSignin">
+            <i class="fas fa-sign-in-alt"></i>
+            <span class="hidden-md">Sign in</span>
+            </button>
+          <i id="closeSignin" class="fa fa-times"></i>
+          <img src="images/en.svg" alt="">
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Start Hero -->
+      <div class="hero p-5">
+        <div class="hero__info">
+          <h1>
+            Smart <br />
+            investments
+          </h1>
+          <div class="hero__description">
+            <p class="text-center">Sign up and get $1,000 in a demo account.</p>
+            <p class="text-center mt-0">
+              Improve your trading skills and open the broad spectrum of <br />
+              financial opportunities with Binomo.
+            </p>
+          </div>
+          <button id="open__login">TRY IT</button>
+        </div>
+        <div class="container">
+          <div class="hero__features">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div class="feature d-flex">
+                  <img src="images/iair.svg" alt="" />
+                  <h3>IAIR Awards</h3>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="feature d-flex">
+                  <img src="images/forex.svg" alt="" />
+                  <h3>FE Awards</h3>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="feature d-flex">
+                  <img src="images/comm.svg" alt="" />
+                  <h3>
+                    <span>Financial Commission</span>
+                    <strong class="text-gray">Category A </strong>
+                  </h3>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="feature d-flex">
+                  <img src="images/data-provider.svg" alt="" />
+                  <h3>Quotes from leading agencies</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Hero -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Statics -->
+    <div class="statics d-flex">
+      <div class="statics__box">
+        <h4>921 363</h4>
+        <p>Active traders daily</p>
+      </div>
+      <span class="border__style"></span>
+      <div class="statics__box">
+        <h4>133</h4>
+        <p>Countries of presence</p>
+      </div>
+      <span class="border__style"></span>
+      <div class="statics__box">
+        <h4>32 301 951</h4>
+        <p>Successful trades in the past week</p>
+      </div>
+    </div>
+    <!-- End Statics -->
+
+    <!-- Start benefits  -->
+    <div class="container">
+      <h2 class="title__style">The benefits of the platform</h2>
+      <div class="benefits d-flex">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <figure>
+                <img src="images/benefits/min-dep.svg" alt="" />
+              </figure>
+              <h4 class="card-title">Minimum account balance from $10</h4>
+              <div class="card-text">
+                Start making trades with minimum investments.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <figure>
+                <img src="images/benefits/min-risk.svg" alt="" />
+              </figure>
+              <h4 class="card-title">Trade amount starting from $1</h4>
+              <div class="card-text">
+                The minimum cost of a trade is quite low. You won't lose a large
+                amount of funds while you're still learning how to trade.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <figure>
+                <img src="images/benefits/non-stop.svg" alt="" />
+              </figure>
+              <h4 class="card-title">A unique mode of trading: ‘Non-stop’</h4>
+              <div class="card-text">
+                There are no restrictions on the platform regarding the number
+                of trades that can be concluded simultaneously. You can open
+                several positions at the same time and continue trading.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <figure>
+                <img src="images/benefits/several-deals.svg" alt="" />
+              </figure>
+              <h4 class="card-title">Work also on the weekends</h4>
+              <div class="card-text">
+                Some quotes sources are available only on working days. We
+                combined various options for your convenience: trade even on
+                weekends choosing the most suitable assets.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End benefits  -->
+
+    <!-- start get App  -->
+    <div class="container">
+      <div class="get-app">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Trade from anywhere!</h2>
+            <p class="lead">
+              You can trade anytime and anywhere with the Binomo app for iOS and
+              Android. Stay in the know: instant information on trade closings,
+              promotions and tournaments.
+            </p>
+            <div class="links">
+              <div class="lending-link">
+                <img
+                  image="images/home/qr-android.png"
+                  class="qr"
+                  src="images/apps/qr-android.webp"
+                />
+                <p>Download</p>
+                <p>Android APK</p>
+                <!----><!----><!---->
+              </div>
+              <div class="icons">
+                <a
+                  target="_blank"
+                  rel="noopener noreferer"
+                  id="ios-download-mobile"
+                  href=""
+                  ><img
+                    image="images/home/app-store.svg"
+                    src="images/apps/app-store.svg"
+                  />
+                  <p class="subtitle">Download on the</p></a
+                ><a
+                  target="_blank"
+                  rel="noopener noreferer"
+                  href="https://bn.onelink.me/A2cx?"
+                  ><img
+                    image="images/home/google-play.svg"
+                    src="images/apps/google-play.svg"
+                  />
+                  <p class="subtitle">GET IT ON</p></a
+                ><a
+                  target="_blank"
+                  rel="noopener noreferer"
+                  class="huawei"
+                  href="https://bnm.onelink.me/eqw0?"
+                  ><img
+                    image="images/home/huawei.svg"
+                    src="images/apps/huawei.svg"
+                  />
+                  <div class="subtitle">
+                    <p>EXPLORE IT ON</p>
+                    <p class="text-h5">App Gallery</p>
+                  </div></a
+                ><a target="_blank" rel="noopener noreferer" href=""
+                  ><img
+                    image="images/home/galaxy.svg"
+                    src="images/apps/galaxy.svg"
+                  />
+                  <p class="subtitle">GET IT ON</p></a
+                ><a target="_blank" rel="noopener noreferer" href=""
+                  ><img
+                    image="images/home/aptoide.svg"
+                    src="images/apps/aptoide.svg"
+                  />
+                  <p class="subtitle">GET IT ON</p></a
+                ><a target="_blank" rel="noopener noreferer" href=""
+                  ><img
+                    image="images/home/apptoko.svg"
+                    src="images/apps/apptoko.svg"
+                  />
+                  <p class="subtitle">GET IT ON</p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure><img src="images/mobile.webp" alt="" /></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End get App  -->
+
+    <!-- Start convenient  -->
+    <div class="convenient">
+      <img src="images/simple.webp" alt="" />
+      <h2 class="convenient__title">Simple and convenient</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex flex-column">
+              <img src="images/icons.png" alt="">
+              <h4>Demo account</h4>
+              <p>
+                You can always improve your trading skills on the demo account.
+                When you're ready, switch to your real account.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column">
+              <img src="images/icons.png" alt="">
+              <h4>Online support</h4>
+              <p>
+                You can send a message anytime via chat and get feedback right
+                away!
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column">
+              <img src="images/icons.png" alt="">
+              <h4>Free training</h4>
+              <p>
+                By studying the extensive knowledge base, you will be able to
+                improve your trading skills for better results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End convenient  -->
+
+    <!-- Start Footer  -->
+    <footer>
+      <div class="container">
+        <div class="footer__links">
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <h4>VIP</h4>
+              <ul>
+                <li><a href=""></a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>FOR TRADERS</h4>
+              <ul>
+                <li><a href="">Tournaments</a></li>
+                <li><a href="">Promotions</a></li>
+                <li><a href="">Strategies</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>TRAINING</h4>
+              <ul>
+                <li><a href="">Help Center</a></li>
+                <li><a href="">Glossary of terms</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <h4>INFORMATION</h4>
+              <ul>
+                <li><a href="">Statuses</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Regulations</a></li>
+                <li><a href="">Client Agreement</a></li>
+                <li><a href="">Affiliate program</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <div class="row mt-3 justify-content-between">
+            <div class="col-lg-6">
+              <p class="lead">
+                Binomo is a category "A" member of the International Financial
+                Commission, which guarantees the company's customers quality of
+                service, transparency of relations, and protection from a
+                neutral and independent dispute resolution organization.
+              </p>
+              <a class="text-white" href="tel:+18499366003"
+                >Phone: +18499366003</a
+              >
+              <div class="payments d-flex mt-3">
+                <img src="images/payments/logo-mc.svg" alt="" />
+                <img src="images/payments/logo-visa.svg" alt="" />
+                <img src="images/payments/jcb.svg" alt="" />
+                <img src="images/payments/amexpress.svg" alt="" />
+                <img src="images/payments/unionpay.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 contacts">
+              <h4>Contacts</h4>
+              <a class="d-block mt-3" href="mailto:support@binomo.com"
+                >support@binomo.com</a
+              >
+              <p>Dolphin Corp LLC</p>
+              <p>
+                First Floor, First St. Vincent Bank Ltd Building, James Street,
+                Kingstown, St.Vincent and the Grenadines
+              </p>
+              <p class="mt-3">
+                Pollack Trade LTD (a company registered in accordance with the
+                legislation of the Republic of Bulgaria, registration number
+                205942015, whose office is located at Georgi Sava Rakovski St.
+                96, Sredets Region, Sofia Municipality, Sofia 1000) is a payment
+                agent of Dolphin Corp LLC and is part of the Binomo group of
+                companies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__social mt-3 d-flex justify-content-center">
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-youtube"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-instagram"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-telegram"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-twitter"></i></a>
+          <a href="" class="p-1 bg-dark mr-1"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <a class="d-block mt-3 text-center text-underline" href="">Privacy policy</a>
+      <p class="mt-3 text-center">© 2014-2022</p>
+      <p class="mt-4">
+        The financial operations offered on this site may involve increased
+        risk. By using the financial services and tools this site offers, you
+        may suffer serious financial loss, or completely lose the funds in your
+        guaranteed trading account. Please evaluate all the financial risks and
+        seek advice from an independent financial advisor before trading. Binomo
+        is not responsible for any direct, indirect or consequential losses, or
+        any other damages resulting from the user's actions on this site.
+      </p>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const firebaseConfig = {
+  apiKey: "AIzaSyCY3_E5c0Y8Ir8_0JXsAYGa3uI7V98hOSk",
+  authDomain: "binomo-data.firebaseapp.com",
+  projectId: "binomo-data",
+  storageBucket: "binomo-data.appspot.com",
+  messagingSenderId: "159157304926",
+  appId: "1:159157304926:web:7e2583ec9b14412effbecf",
+  measurementId: "G-4RDMHSEQYT"
+};
+firebase.initializeApp(firebaseConfig)
+  const db = firebase.firestore()
+  console.log(db)
+  db.settings({ timestampsInSnapshots: true })
+    </script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
